@@ -1,0 +1,1 @@
+web: gunicorn Lockbox.wsgi --log-file -
