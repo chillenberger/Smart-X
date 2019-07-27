@@ -1,0 +1,61 @@
+{% extends "index.html" %}
+
+{% block content %}
+
+{% load static %}
+<!-- Header -->
+
+<header class="masthead bg-primary text-tertiary" id="portfolio">
+  <div class="container">
+    <h2 class="text-center text-uppercase text-tertiary mb-0">Controls</h2>
+    <hr class="star-dark mb-5">
+    <div class="row text-center conrols-list">
+      <div class="col-md-6 col-lg-3">
+        <form method="post">{% csrf_token %}
+          <Button type="submit" value="Update" class="controlButton">
+          <h5 class="text-tertiary">Lock/Unlock</h5>
+            <div class="mx-auto controls-icon">
+              <i class="fas fa-unlock-alt"></i>
+            </div>
+          </Button>
+          {{ form.as_p }}
+        </form>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <a class=" mx-auto controls-icon" href="{% url "shippinginfonew" %}" >
+          <h5 class="text-tertiary">New Shipping Info</h5>
+          <ion-icon name="barcode"></ion-icon>
+        </a>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <a class="portfolio-item d-block mx-auto controls-icon" href="#portfolio-modal-3">
+          <h5 class="text-tertiary">Activity</h5>
+          <ion-icon name="list-box"></ion-icon>
+        </a>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <a class="portfolio-item d-block mx-auto controls-icon" href="#portfolio-modal-3">
+          <h5 class="text-tertiary">Settings</h5>
+          <ion-icon name="settings"></ion-icon>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<!-- Portfolio Grid Section -->
+<section class="portfolio bg-secondary" id="portfolio">
+  <div class="container text-center text-secondary-main">
+    <img class="img-fluid mb-5 d-block mx-auto" src="img/profile.png" alt="">
+    <h1 class="text-uppercase mb-0">About My LockBox</h1>
+    <hr class="star-light">
+    <h2 class="font-weight-light mb-0">This will look better in the future</h2>
+  </div>
+</section>
+
+
+
+
+
+{% endblock %}

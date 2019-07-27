@@ -1,0 +1,30 @@
+{% extends "index.html" %}
+{% block content %}
+{% load static %}
+
+  <div style="margin-top: 10%; text-align: center" class="text-center">
+    <div stye="background-color: #18BC9C">
+      <h4> Here is your shipping info</h4>
+      <p>{{ shippinginfomodel.item }}</p>
+      <div style="margin: auto" id="qrcode">
+      </div>
+    </div>
+    <a href="{% url 'signed_in' %}">
+      <h4>Return to Sign in home</h4>
+    </a>
+  </div>
+
+  <script src='{% static 'js/QRcode/qrcode.js' %}'></script>
+
+  <script type="text/javascript">
+    var qrcode = new QRCode("qrcode", {
+      text: "{{ shippinginfomodel.barCode }}",
+      width: 128,
+      height: 128,
+      colorDark : "#000000",
+      colorLight : "#ffffff",
+      correctLevel : QRCode.CorrectLevel.H
+    });
+  </script>
+
+{% endblock content %}

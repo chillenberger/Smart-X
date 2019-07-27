@@ -1,0 +1,23 @@
+{% extends "index.html" %}
+{% block content %}
+{% load static %}
+
+
+  <div style="margin-top: 10%" class="text-center">
+    <form method="post">{% csrf_token %}
+      <p>Item name</p>
+      {{ form.item }}
+      <br><br>
+      <p>Shipping number</p>
+      {{ form.shippingNumber }}
+      <br><br>
+      <Button type="submit" value="Update" class="controlButton">
+        <h5 class="text-tertiary">Save new Shipping Info</h5>
+      </Button>
+    </form>
+    <a href="{% url 'signed_in' %}">
+      <h4>Return to last</h4>
+    </a>
+  </div>
+
+{% endblock content %}
