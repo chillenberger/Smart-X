@@ -6,7 +6,7 @@ import uuid
 # Will be used to create users update in the future
 from django.contrib.auth.models import User
 from datetime import datetime
-from mysite.python.functions import codeCreator, codGenerator
+from Home.python.functions import codeCreator, codGenerator
 
 #used to populate info afert submited
 from django.db.models.signals import post_save, pre_save
@@ -44,8 +44,6 @@ class ShippingInfoModel(models.Model):
     creationDate = models.DateTimeField(default=datetime.now())
     expectedDeliveryDate = models.DateTimeField(blank = True, null = True)
     barCode = models.CharField(max_length = 120, blank = True, null = True)
-    # barCodeReadable = models.CharField(max_length = 120, blank = True, null = True) #look into needing this and how we will render barcode
-    # pinCode = models.CharField(max_length = 9, blank = True, null = True)  #remove pin code no longer used
 
     #Return a string to represent model
     def __str__(self):
@@ -57,11 +55,7 @@ class ShippingInfoModel(models.Model):
         if not self.pk:
             print('in reciever funciotn')
             print(self.id)
-            # code = codeCreator()
             code = codGenerator(2,4)
             self.barCode = code
-            # self.barCode = code.barCode
-            # self.barCodeReadable = code.readableCode
-            # self.pinCode = code.pinCode
             self.pk = self.shippingNumber
         super(ShippingInfoModel, self).save(*args, **kwargs)
