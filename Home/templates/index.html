@@ -42,7 +42,7 @@
             <a class="nav-link js-scroll-trigger" href="#about">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#signup">Contact</a>
+            <a class="nav-link js-scroll-trigger" href="#contact" data-offset="50">Contact</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{% url "sign_in" %}">Login</a>
@@ -69,7 +69,9 @@
       <div class="row">
         <div class="col-lg-8 mx-auto">
           <h2 class="text-white mb-4">Integration</h2>
-          <p class="text-white-50">Extending the internet to everyday components. We have found the edge to penetrate the market, positioning ourselves to be a major player in the IoT revolution.</p>
+          <p class="text-white-50">Extending the internet to everyday components. We are developing products that solve a very large and growing problem, positioning the
+                                    company to be highly successful in the Internet of Things (IoT) revolution.  The IoT sector
+                                    is a $5 Trillion market today and is expected to grow to $19 Trillion by 2025</p>
         </div>
       </div>
       <img src="{% static "img/ipadSmart.png" %}" class="img-fluid" alt="">
@@ -80,22 +82,23 @@
   <section id="projects" class="projects-section bg-light">
     <div class="container">
 
-      <!-- Featured Project Row -->
+      <!-- Problem statement  -->
       <div class="row align-items-center no-gutters mb-4 mb-lg-5">
         <div class="col-xl-8 col-lg-7">
           <img class="img-fluid mb-3 mb-lg-0" src="{% static "img/bg-masthead.jpg" %}" alt="">
         </div>
         <div class="col-xl-4 col-lg-5">
-          <div class="featured-text text-center text-lg-left">
+          <div class="featured-text-left text-center text-lg-left">
             <h4>Competition</h4>
-            <p class="text-black-50 mb-0">The competition has no practical solution for the problem we are solving.</p>
+            <p class="text-black-50 mb-0">The growing problem has only been addressed around the periphery.  We plan to
+                                          address the problem head on in order to solve it.</p>
           </div>
         </div>
       </div>
 
-      <!-- Project One Row -->
+      <!-- Residential Row -->
       <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
-        <div class="col-lg-6">
+        <div class="col-lg-6 soften-image">
           <img class="img-fluid" src="{% static "img/ResidentialHome.jpg" %}" alt="">
         </div>
         <div class="col-lg-6">
@@ -111,9 +114,9 @@
         </div>
       </div>
 
-      <!-- Project Two Row -->
+      <!-- Style Row -->
       <div class="row justify-content-center no-gutters">
-        <div class="col-lg-6">
+        <div class="col-lg-6 soften-image">
           <img class="img-fluid" src="{% static "img/ModernFrontEntrance.jpg" %}" alt="">
         </div>
         <div class="col-lg-6 order-lg-first">
@@ -129,8 +132,24 @@
         </div>
       </div>
 
+      <!-- Commercial -->
+      <div class="row align-items-center no-gutters mt-4 mt-lg-5">
+        <div class="col-xl-4 col-lg-5">
+          <div class="featured-text-right text-center text-lg-right">
+            <h4>Commercial</h4>
+            <p class="text-black-50 mb-0">Complementary commercial solutions are in development alongside our consumer product line.</p>
+          </div>
+        </div>
+        <div class="col-xl-8 col-lg-7 soften-image">
+          <img class="img-fluid mb-3 mb-lg-0" src="{% static "img/CommercialBuildingAult.jpg" %}" alt="">
+        </div>
+      </div>
     </div>
+
   </section>
+
+
+
 
   <!-- Signup Section -->
   <section id="signup" class="signup-section">
@@ -153,7 +172,7 @@
   </section>
 
   <!-- Contact Section -->
-  <section class="contact-section bg-black">
+  <section  id="contact" class="contact-section bg-black">
     <div class="container">
 
       <div class="row">
@@ -200,7 +219,7 @@
   <!-- Footer -->
   <footer class="bg-black small text-center text-white-50">
     <div class="container">
-      Copyright &copy; Smart-X 2019
+      Copyright &copy; Smart-X Holdings, Inc. 2019
     </div>
   </footer>
 
