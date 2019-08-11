@@ -34,7 +34,6 @@ class DetailShipppingInfo_Serializer(serializers.ModelSerializer):
             'item',
             'shippingNumber',
             'barCode',
-            'pinCode'  #remove pin code no longer using
         ]
         model = ShippingInfoModel
 
