@@ -8,7 +8,7 @@ from .views import ShippingInfoOutput
 
 #static page urls
 urlpatterns = [
-    url('sign_in/$', TemplateView.as_view(template_name='sign_in.html'), name='sign_in'),
+    url('sign_in_Smart-x/$', TemplateView.as_view(template_name='sign_in.html'), name='sign_in'),
     # url('signed_in/$', TemplateView.as_view(template_name='signed_in.html'), name='signed_in'),
     url(r'^API/LockBoxStatus/$', views.ListLockBoxStatus_API.as_view()),
     url(r'^API/LockBoxStatus/(?P<pk>[-\w]+)/$', views.DetailLockBoxStatus_API.as_view()),
